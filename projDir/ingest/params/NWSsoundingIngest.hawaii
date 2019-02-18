@@ -123,6 +123,117 @@ max_realtime_valid_age = 7200;
 
 //======================================================================
 //
+// SPECIFY THE BLOCKS TO USE.
+//
+// A sounding may comprise a number of blocks: TTAA, TTBB, TTCC, TTDD, 
+//   PPAA, PPBB, PPCC and PPDD. Generally you only want to use TTAA and 
+//   TTBB blocks, but the option is there to use the other blocks as well. 
+//   Data from the various blocks, at the same time, will be merged into a 
+//   single sounding.
+//
+//======================================================================
+ 
+///////////// use_TTAA ////////////////////////////////
+//
+// Use the TTAA block?.
+//
+// This contains the mandatory levels - 1000, 925, 850,  700, 500, 400, 
+//   300, 200, 150, 100 hPa.
+//
+//
+// Type: boolean
+//
+
+use_TTAA = TRUE;
+
+///////////// use_TTBB ////////////////////////////////
+//
+// Use the TTBB block?.
+//
+// This contains the significant levels - i.e. where there is a change 
+//   in slope in the sounding.
+//
+//
+// Type: boolean
+//
+
+use_TTBB = TRUE;
+
+///////////// use_TTCC ////////////////////////////////
+//
+// Use the TTCC block?.
+//
+// This contains possible mandatory levels above 100 hPa - 70, 50, 30, 
+//   20, 10.
+//
+//
+// Type: boolean
+//
+
+use_TTCC = TRUE;
+
+///////////// use_TTDD ////////////////////////////////
+//
+// Use the TTDD block?.
+//
+// This contains possible significant levels above 100 hPa.
+//
+//
+// Type: boolean
+//
+
+use_TTDD = TRUE;
+
+///////////// use_PPAA ////////////////////////////////
+//
+// Use the PPAA block?.
+//
+// PP blocks contain wind data. Generally not used. See TTAA.
+//
+//
+// Type: boolean
+//
+
+use_PPAA = FALSE;
+
+///////////// use_PPBB ////////////////////////////////
+//
+// Use the PPBB block?.
+//
+// PP blocks contain wind data. Generally not used. See TTBB.
+//
+//
+// Type: boolean
+//
+
+use_PPBB = FALSE;
+
+///////////// use_PPCC ////////////////////////////////
+//
+// Use the PPCC block?.
+//
+// PP blocks contain wind data. Generally not used. See TTCC.
+//
+//
+// Type: boolean
+//
+
+use_PPCC = FALSE;
+
+///////////// use_PPDD ////////////////////////////////
+//
+// Use the PPDD block?.
+//
+// PP blocks contain wind data. Generally not used. See TTDD.
+//
+//
+// Type: boolean
+//
+
+use_PPDD = FALSE;
+
+//======================================================================
+//
 // LOCATION INFORMATION.
 //
 // The name is optional. If it has a non-zero length it will be used 
