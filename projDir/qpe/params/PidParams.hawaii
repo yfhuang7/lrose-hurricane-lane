@@ -300,7 +300,7 @@ PID_melting_layer_spdb_output_url = "/tmp/spdb/melting_layer";
 // Type: boolean
 //
 
-PID_use_soundings_from_spdb = FALSE;
+PID_use_soundings_from_spdb = TRUE;
 
 ///////////// PID_sounding_spdb_url ///////////////////
 //
@@ -310,7 +310,7 @@ PID_use_soundings_from_spdb = FALSE;
 // Type: string
 //
 
-PID_sounding_spdb_url = "spdb/soundings";
+PID_sounding_spdb_url = "$(DATA_DIR)/hawaii/spdb/soundings/gfs";
 
 ///////////// PID_sounding_search_time_margin_secs ////
 //
@@ -336,7 +336,7 @@ PID_sounding_search_time_margin_secs = 86400;
 // Type: string
 //
 
-PID_sounding_location_name = "";
+PID_sounding_location_name = "$(RADAR_NAME)";
 
 ///////////// PID_sounding_check_pressure_range ///////
 //

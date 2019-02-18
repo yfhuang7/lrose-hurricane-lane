@@ -1,6 +1,7 @@
 #! /bin/csh
 
 setenv radar_name phki
+setenv RADAR_NAME PHKI
 
 cd $HOME/git/lrose-hurricane-lane/projDir/qpe/params
 
