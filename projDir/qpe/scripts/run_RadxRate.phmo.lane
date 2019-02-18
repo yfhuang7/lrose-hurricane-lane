@@ -1,9 +1,9 @@
 #! /bin/csh
 
-setenv radar_name phki
-setenv RADAR_NAME PHKI
+setenv radar_name phmo
+setenv RADAR_NAME PHMO
 setenv SOUNDING_NAME PHLI
-setenv LOG_PATH /tmp/RadxRate.hawaii.phki.log
+setenv LOG_PATH /tmp/RadxRate.hawaii.phmo.log
 
 cd $HOME/git/lrose-hurricane-lane/projDir/qpe/params
 
