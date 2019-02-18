@@ -533,7 +533,7 @@ output_fields = {
     long_name = "temperature_for_computing_pid",
     standard_name = "temperature",
     units = "C",
-    do_write = FALSE
+    do_write = TRUE
   }
   ,
   {
@@ -551,7 +551,7 @@ output_fields = {
     long_name = "kdp_conditioned_using_ZZDR_self_consistency",
     standard_name = "specific_differential_phase_hv",
     units = "deg/km",
-    do_write = FALSE
+    do_write = TRUE
   }
 };
 
