@@ -106,39 +106,39 @@ field_list = {
 #############################
 # NEXRAD MOMENTS
 
-NEX_PHMO_DBZ   PHMO_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phmo/moments?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-NEX_PHMO_VEL   PHMO_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phmo/moments?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-NEX_PHMO_WIDTH PHMO_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phmo/moments?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-NEX_PHMO_ZDR   PHMO_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phmo/moments?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-NEX_PHMO_PHIDP PHMO_PHIDP  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phmo/moments?use_http=true&PHIDP       phidp.colors deg -5 80 5 radial 1 0
-NEX_PHMO_RHOHV PHMO_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phmo/moments?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+NEX_PHMO_DBZ   PHMO_DBZ    $(DATA_DIR)/hawaii/cfradial/phmo/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+NEX_PHMO_VEL   PHMO_VEL    $(DATA_DIR)/hawaii/cfradial/phmo/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
+NEX_PHMO_WIDTH PHMO_WIDTH  $(DATA_DIR)/hawaii/cfradial/phmo/moments&WIDTH        width.colors m/s -5 80 5 radial 1 0
+NEX_PHMO_ZDR   PHMO_ZDR    $(DATA_DIR)/hawaii/cfradial/phmo/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+NEX_PHMO_PHIDP PHMO_PHIDP  $(DATA_DIR)/hawaii/cfradial/phmo/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
+NEX_PHMO_RHOHV PHMO_RHOHV  $(DATA_DIR)/hawaii/cfradial/phmo/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
-NEX_PHKI_DBZ   PHKI_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/moments?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-NEX_PHKI_VEL   PHKI_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/moments?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-NEX_PHKI_WIDTH PHKI_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/moments?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-NEX_PHKI_ZDR   PHKI_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/moments?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-NEX_PHKI_PHIDP PHKI_PHIDP  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/moments?use_http=true&PHIDP       phidp.colors deg -5 80 5 radial 1 0
-NEX_PHKI_RHOHV PHKI_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/moments?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+NEX_PHKI_DBZ   PHKI_DBZ    $(DATA_DIR)/hawaii/cfradial/phki/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+NEX_PHKI_VEL   PHKI_VEL    $(DATA_DIR)/hawaii/cfradial/phki/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
+NEX_PHKI_WIDTH PHKI_WIDTH  $(DATA_DIR)/hawaii/cfradial/phki/moments&WIDTH        width.colors m/s -5 80 5 radial 1 0
+NEX_PHKI_ZDR   PHKI_ZDR    $(DATA_DIR)/hawaii/cfradial/phki/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+NEX_PHKI_PHIDP PHKI_PHIDP  $(DATA_DIR)/hawaii/cfradial/phki/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
+NEX_PHKI_RHOHV PHKI_RHOHV  $(DATA_DIR)/hawaii/cfradial/phki/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
-NEX_PHKM_DBZ   PHKM_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phkm/moments?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-NEX_PHKM_VEL   PHKM_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phkm/moments?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-NEX_PHKM_WIDTH PHKM_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phkm/moments?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-NEX_PHKM_ZDR   PHKM_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phkm/moments?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-NEX_PHKM_PHIDP PHKM_PHIDP  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phkm/moments?use_http=true&PHIDP       phidp.colors deg -5 80 5 radial 1 0
-NEX_PHKM_RHOHV PHKM_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phkm/moments?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+NEX_PHKM_DBZ   PHKM_DBZ    $(DATA_DIR)/hawaii/cfradial/phkm/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+NEX_PHKM_VEL   PHKM_VEL    $(DATA_DIR)/hawaii/cfradial/phkm/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
+NEX_PHKM_WIDTH PHKM_WIDTH  $(DATA_DIR)/hawaii/cfradial/phkm/moments&WIDTH        width.colors m/s -5 80 5 radial 1 0
+NEX_PHKM_ZDR   PHKM_ZDR    $(DATA_DIR)/hawaii/cfradial/phkm/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+NEX_PHKM_PHIDP PHKM_PHIDP  $(DATA_DIR)/hawaii/cfradial/phkm/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
+NEX_PHKM_RHOHV PHKM_RHOHV  $(DATA_DIR)/hawaii/cfradial/phkm/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
-NEX_PHWA_DBZ   PHWA_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phwa/moments?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-NEX_PHWA_VEL   PHWA_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phwa/moments?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-NEX_PHWA_WIDTH PHWA_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phwa/moments?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-NEX_PHWA_ZDR   PHWA_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phwa/moments?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-NEX_PHWA_PHIDP PHWA_PHIDP  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phwa/moments?use_http=true&PHIDP       phidp.colors deg -5 80 5 radial 1 0
-NEX_PHWA_RHOHV PHWA_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phwa/moments?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+NEX_PHWA_DBZ   PHWA_DBZ    $(DATA_DIR)/hawaii/cfradial/phwa/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+NEX_PHWA_VEL   PHWA_VEL    $(DATA_DIR)/hawaii/cfradial/phwa/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
+NEX_PHWA_WIDTH PHWA_WIDTH  $(DATA_DIR)/hawaii/cfradial/phwa/moments&WIDTH        width.colors m/s -5 80 5 radial 1 0
+NEX_PHWA_ZDR   PHWA_ZDR    $(DATA_DIR)/hawaii/cfradial/phwa/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+NEX_PHWA_PHIDP PHWA_PHIDP  $(DATA_DIR)/hawaii/cfradial/phwa/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
+NEX_PHWA_RHOHV PHWA_RHOHV  $(DATA_DIR)/hawaii/cfradial/phwa/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
@@ -307,6 +307,8 @@ SAT_==== ========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&E
 #------------------------------------------------------------------------------------------
 
 World         World          world_states.map        1  0.0 1000000.0  white
+Radars        Radars         radar_loc.map           1  0.0 1000000.0  orange
+Soundings     Soundings      sounding_loc.map        1  0.0 1000000.0  yellow
 
 </MAPS>
 
@@ -387,7 +389,7 @@ cidd.debug2_flag:           0
 #  System will startup using field 0, requesting data closest to the
 # demo time. The movie frame will be centered on the time after applying
 # temporal rounding. 
-#cidd.demo_time:  23:00 6/8/2014
+cidd.demo_time:  00:00 08/26/2018
 
 # Set times to the nearest value divisible by the number of seconds
 cidd.temporal_rounding:    1
@@ -697,11 +699,8 @@ cidd.max_adeg:               360.0
 # List of comma delimited local directories or HTTP URLs to search
 # Searchs . then each directory/URL in order 
 
-cidd.color_file_subdir:   http://front.eol.ucar.edu/color_scales
-cidd.map_file_subdir:     http://front.eol.ucar.edu/maps
-
-#cidd.color_file_subdir:   $(PROJ_DIR)/display/color_scales,http://front.eol.ucar.edu/content/projects/hawk/hawaii/projDir/display/color_scales
-#cidd.map_file_subdir:     $(PROJ_DIR)/display/maps,http://front.eol.ucar.edu/content/projects/hawk/hawaii/projDir/display/maps
+cidd.color_file_subdir:   $(HOME)/git/lrose-hurricane-lane/projDir/display/color_scales
+cidd.map_file_subdir:     $(HOME)/git/lrose-hurricane-lane/projDir/display/maps
 
 #
 # Station locator features
@@ -906,8 +905,8 @@ cidd.vert_right_margin:      30
 
 
 # Set range_ring_spacing to a negative value to dynamically determing spacing.
-cidd.range_ring_spacing:     25.0
-cidd.max_ring_range:     150.0
+cidd.range_ring_spacing:     50.0
+cidd.max_ring_range:        250.0
 
 #  Render Range rings at the origin of the data, instead of the origin of the display.
 cidd.range_ring_follows_data: 1
@@ -918,8 +917,8 @@ cidd.domain_follows_data: 0
 # x_space, y_space in pixels determine allowable space for range ring labels
 cidd.range_ring_x_space:    40
 cidd.range_ring_y_space:    13
-cidd.azmith_interval:       30.0
-cidd.azmith_radius:         200.0
+cidd.azmith_interval:       45.0
+cidd.azmith_radius:         250.0
 
 # Toggles to turn on/off  Extras features on startup
 cidd.range_rings:             1
