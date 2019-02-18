@@ -24,7 +24,7 @@
 // Type: string
 //
 
-PID_thresholds_file_path = "./pid_thresholds.nexrad";
+PID_thresholds_file_path = "$(HOME)/git/lrose-hurricane-lane/projDir/qpe/params/pid_thresholds.nexrad";
 
 ///////////// PID_snr_threshold ///////////////////////
 //
@@ -310,7 +310,7 @@ PID_use_soundings_from_spdb = TRUE;
 // Type: string
 //
 
-PID_sounding_spdb_url = "$(DATA_DIR)/hawaii/spdb/soundings/gfs";
+PID_sounding_spdb_url = "$(DATA_DIR)/hawaii/spdb/soundings/nws";
 
 ///////////// PID_sounding_search_time_margin_secs ////
 //
@@ -336,7 +336,7 @@ PID_sounding_search_time_margin_secs = 86400;
 // Type: string
 //
 
-PID_sounding_location_name = "$(RADAR_NAME)";
+PID_sounding_location_name = "$(SOUNDING_NAME)";
 
 ///////////// PID_sounding_check_pressure_range ///////
 //

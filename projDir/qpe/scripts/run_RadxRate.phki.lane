@@ -2,6 +2,7 @@
 
 setenv radar_name phki
 setenv RADAR_NAME PHKI
+setenv SOUNDING_NAME PHLI
 
 cd $HOME/git/lrose-hurricane-lane/projDir/qpe/params
 

@@ -79,25 +79,25 @@
 #----------------------------------------------------------------------------------------------------------
 
 
-BEAML_PHKM   BEAML_PHKM     /scr/snow2/rsfdata/BeamBlock/PHKM&BEAML   interest.colors    percent  0 250   10 cont 1 0 
-BEAME_PHKM   BEAME_PHKM     /scr/snow2/rsfdata/BeamBlock/PHKM&BEAME   interest.colors    percent  0 250   10 cont 1 0 
-PEAK_PHKM    PEAK_PHKM      /scr/snow2/rsfdata/BeamBlock/PHKM&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
-TERRAIN_PHKM TERRAIN_PHKM   /scr/snow2/rsfdata/BeamBlock/PHKM/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
+BEAML_PHKM   BEAML_PHKM     $(DATA_DIR)/hawaii/BeamBlock/PHKM&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAME_PHKM   BEAME_PHKM     $(DATA_DIR)/hawaii/BeamBlock/PHKM&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+PEAK_PHKM    PEAK_PHKM      $(DATA_DIR)/hawaii/BeamBlock/PHKM&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+TERRAIN_PHKM TERRAIN_PHKM   $(DATA_DIR)/hawaii/BeamBlock/PHKM/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
 
-BEAML_PHKI  BEAML_PHKI      /scr/snow2/rsfdata/BeamBlock/PHKI&BEAML   interest.colors    percent  0 250   10 cont 1 0 
-BEAME_PHKI  BEAME_PHKI      /scr/snow2/rsfdata/BeamBlock/PHKI&BEAME   interest.colors    percent  0 250   10 cont 1 0 
-PEAK_PHKI   PEAK_PHKI       /scr/snow2/rsfdata/BeamBlock/PHKI&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
-TERRAIN_PHKI TERRAIN_PHKI   /scr/snow2/rsfdata/BeamBlock/PHKI/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
+BEAML_PHKI  BEAML_PHKI      $(DATA_DIR)/hawaii/BeamBlock/PHKI&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAME_PHKI  BEAME_PHKI      $(DATA_DIR)/hawaii/BeamBlock/PHKI&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+PEAK_PHKI   PEAK_PHKI       $(DATA_DIR)/hawaii/BeamBlock/PHKI&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+TERRAIN_PHKI TERRAIN_PHKI   $(DATA_DIR)/hawaii/BeamBlock/PHKI/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
 
-BEAML_PHMO  BEAML_PHMO      /scr/snow2/rsfdata/BeamBlock/PHMO&BEAML   interest.colors    percent  0 250   10 cont 1 0 
-BEAME_PHMO  BEAME_PHMO      /scr/snow2/rsfdata/BeamBlock/PHMO&BEAME   interest.colors    percent  0 250   10 cont 1 0 
-PEAK_PHMO   PEAK_PHMO       /scr/snow2/rsfdata/BeamBlock/PHMO&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
-TERRAIN_PHMO TERRAIN_PHMO   /scr/snow2/rsfdata/BeamBlock/PHMO/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
+BEAML_PHMO  BEAML_PHMO      $(DATA_DIR)/hawaii/BeamBlock/PHMO&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAME_PHMO  BEAME_PHMO      $(DATA_DIR)/hawaii/BeamBlock/PHMO&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+PEAK_PHMO   PEAK_PHMO       $(DATA_DIR)/hawaii/BeamBlock/PHMO&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+TERRAIN_PHMO TERRAIN_PHMO   $(DATA_DIR)/hawaii/BeamBlock/PHMO/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
 
-BEAML_PHWA  BEAML_PHWA      /scr/snow2/rsfdata/BeamBlock/PHWA&BEAML   interest.colors    percent  0 250   10 cont 1 0 
-BEAME_PHWA  BEAME_PHWA      /scr/snow2/rsfdata/BeamBlock/PHWA&BEAME   interest.colors    percent  0 250   10 cont 1 0 
-PEAK_PHWA   PEAK_PHWA       /scr/snow2/rsfdata/BeamBlock/PHWA&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
-TERRAIN_PHKM TERRAIN_PHKM   /scr/snow2/rsfdata/BeamBlock/PHKM/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
+BEAML_PHWA  BEAML_PHWA      $(DATA_DIR)/hawaii/BeamBlock/PHWA&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAME_PHWA  BEAME_PHWA      $(DATA_DIR)/hawaii/BeamBlock/PHWA&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+PEAK_PHWA   PEAK_PHWA       $(DATA_DIR)/hawaii/BeamBlock/PHWA&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+TERRAIN_PHKM TERRAIN_PHKM   $(DATA_DIR)/hawaii/BeamBlock/PHKM/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
 
 </GRIDS>
 
@@ -162,6 +162,9 @@ TERRAIN_PHKM TERRAIN_PHKM   /scr/snow2/rsfdata/BeamBlock/PHKM/cart_terrain&terra
 #------------------------------------------------------------------------------------------
 
 World         World          world_states.map        1  0.0 1000000.0  white
+Radars        Radars         radar_loc.map           1  0.0 1000000.0  orange
+Soundings     Soundings      sounding_loc.map        1  0.0 1000000.0  yellow
+
 
 </MAPS>
 
@@ -457,8 +460,8 @@ cidd.max_adeg:               360.0
 # List of comma delimited local directories or HTTP URLs to search
 # Searchs . then each directory/URL in order 
 
-cidd.color_file_subdir:   $(PROJ_DIR)/display/color_scales
-cidd.map_file_subdir:     $(PROJ_DIR)/display/maps
+cidd.color_file_subdir:   $(HOME)/git/lrose-hurricane-lane/projDir/display/color_scales
+cidd.map_file_subdir:     $(HOME)/git/lrose-hurricane-lane/projDir/display/maps
 
 #
 # Station locator features
