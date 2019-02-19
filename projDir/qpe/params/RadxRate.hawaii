@@ -803,7 +803,7 @@ pseudo_earth_radius_ratio = 1.33333;
 // Type: string
 //
 
-instance = "test";
+instance = "hawaii";
 
 ///////////// procmap_register_interval ///////////////
 //

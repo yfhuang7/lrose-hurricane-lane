@@ -44,8 +44,9 @@
 //
 
 field_list = {
-  { "NEXRAD moments", "NEX_" },
-  { "NEXRAD rate", "NEXR_ " },
+  { "NEXRAD MOM", "NEX_" },
+  { "NEXRAD RATE", "NEXR_ " },
+  { "NEXRAD QPE", "NEXQ_ " },
   { "NEXRAD cart moments", "CART_" },
   //  { "Surface", "SURF_" },
   { "Model", "MODEL_"},
@@ -145,50 +146,14 @@ NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments
 ############################
 # NEXRAD RATE
 
-NEXR_======== =NEXPID=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain?use_http=true&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
-NEXR_======== =NEXPID=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXR_======== =NEXPID=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXR_======== =NEXPID=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXR_======== =NEXPID=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXR_======== =NEXPID=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXR_======== =NEXPID=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXR_======== =NEXPID=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-
-NEXR_PHMO_KDP         PHMO_KDP         $(DATA_DIR)/hawaii/cfradial/phmo/partrain&KDP            kdp_sband.colors    deg/km -5 80 5 radial 1 0
-NEXR_PHMO_PID         PHMO_PID         $(DATA_DIR)/hawaii/cfradial/phmo/partrain&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXR_PHMO_TEMP        PHMO_TEMP        $(DATA_DIR)/hawaii/cfradial/phmo/partrain&TEMP_FOR_PID   temp.colors  C       -5 80 5 radial 1 0
-NEXR_PHMO_RATE_ZH     PHMO_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phmo/partrain&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHMO_RATE_HYBRID PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phmo/partrain&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHMO_DBZ         PHMO_DBZ         $(DATA_DIR)/hawaii/cfradial/phmo/partrain&DBZ            dbz.colors   dBZ -5 80 5 radial 1 0
-NEXR_PHMO_WIDTH       PHMO_WIDTH       $(DATA_DIR)/hawaii/cfradial/phmo/partrain&WIDTH          width.colors m/s -5 80 5 radial 1 0
-NEXR_PHMO_ZDR         PHMO_ZDR         $(DATA_DIR)/hawaii/cfradial/phmo/partrain&ZDR            zdr.colors   dB  -5 80 5 radial 1 0
-
-NEXR_PHKI_KDP         PHKI_KDP         $(DATA_DIR)/hawaii/cfradial/phki/partrain&KDP            kdp_sband.colors    deg/km -5 80 5 radial 1 0
-NEXR_PHKI_PID         PHKI_PID         $(DATA_DIR)/hawaii/cfradial/phki/partrain&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXR_PHKI_TEMP        PHKI_TEMP        $(DATA_DIR)/hawaii/cfradial/phki/partrain&TEMP_FOR_PID   temp.colors  C       -5 80 5 radial 1 0
-NEXR_PHKI_RATE_ZH     PHKI_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phki/partrain&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHKI_RATE_HYBRID PHKI_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phki/partrain&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHKI_DBZ         PHKI_DBZ         $(DATA_DIR)/hawaii/cfradial/phki/partrain&DBZ            dbz.colors   dBZ -5 80 5 radial 1 0
-NEXR_PHKI_WIDTH       PHKI_WIDTH       $(DATA_DIR)/hawaii/cfradial/phki/partrain&WIDTH          width.colors m/s -5 80 5 radial 1 0
-NEXR_PHKI_ZDR         PHKI_ZDR         $(DATA_DIR)/hawaii/cfradial/phki/partrain&ZDR            zdr.colors   dB  -5 80 5 radial 1 0
-
-NEXR_PHKM_KDP         PHKM_KDP         $(DATA_DIR)/hawaii/cfradial/phkm/partrain&KDP            kdp_sband.colors    deg/km -5 80 5 radial 1 0
-NEXR_PHKM_PID         PHKM_PID         $(DATA_DIR)/hawaii/cfradial/phkm/partrain&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXR_PHKM_TEMP        PHKM_TEMP        $(DATA_DIR)/hawaii/cfradial/phkm/partrain&TEMP_FOR_PID   temp.colors  C       -5 80 5 radial 1 0
-NEXR_PHKM_RATE_ZH     PHKM_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phkm/partrain&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHKM_RATE_HYBRID PHKM_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phkm/partrain&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHKM_DBZ         PHKM_DBZ         $(DATA_DIR)/hawaii/cfradial/phkm/partrain&DBZ            dbz.colors   dBZ -5 80 5 radial 1 0
-NEXR_PHKM_WIDTH       PHKM_WIDTH       $(DATA_DIR)/hawaii/cfradial/phkm/partrain&WIDTH          width.colors m/s -5 80 5 radial 1 0
-NEXR_PHKM_ZDR         PHKM_ZDR         $(DATA_DIR)/hawaii/cfradial/phkm/partrain&ZDR            zdr.colors   dB  -5 80 5 radial 1 0
-
-NEXR_PHWA_KDP         PHWA_KDP         $(DATA_DIR)/hawaii/cfradial/phwa/partrain&KDP            kdp_sband.colors    deg/km -5 80 5 radial 1 0
-NEXR_PHWA_PID         PHWA_PID         $(DATA_DIR)/hawaii/cfradial/phwa/partrain&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXR_PHWA_TEMP        PHWA_TEMP        $(DATA_DIR)/hawaii/cfradial/phwa/partrain&TEMP_FOR_PID   temp.colors  C       -5 80 5 radial 1 0
-NEXR_PHWA_RATE_ZH     PHWA_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phwa/partrain&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHWA_RATE_HYBRID PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phwa/partrain&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXR_PHWA_DBZ         PHWA_DBZ         $(DATA_DIR)/hawaii/cfradial/phwa/partrain&DBZ            dbz.colors   dBZ -5 80 5 radial 1 0
-NEXR_PHWA_WIDTH       PHWA_WIDTH       $(DATA_DIR)/hawaii/cfradial/phwa/partrain&WIDTH          width.colors m/s -5 80 5 radial 1 0
-NEXR_PHWA_ZDR         PHWA_ZDR         $(DATA_DIR)/hawaii/cfradial/phwa/partrain&ZDR            zdr.colors   dB  -5 80 5 radial 1 0
+NEXR_======== =NEXRATE=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain?use_http=true&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
+NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
 NEXR_PHMO_KDP         PHMO_KDP         $(DATA_DIR)/hawaii/cfradial/phmo/rate&KDP            kdp_sband.colors    deg/km -5 80 5 radial 1 0
 NEXR_PHMO_PID         PHMO_PID         $(DATA_DIR)/hawaii/cfradial/phmo/rate&PID            pid.colors    -      -5 80 5 radial 1 0
@@ -226,10 +191,67 @@ NEXR_PHWA_DBZ         PHWA_DBZ         $(DATA_DIR)/hawaii/cfradial/phwa/rate&DBZ
 NEXR_PHWA_WIDTH       PHWA_WIDTH       $(DATA_DIR)/hawaii/cfradial/phwa/rate&WIDTH          width.colors m/s -5 80 5 radial 1 0
 NEXR_PHWA_ZDR         PHWA_ZDR         $(DATA_DIR)/hawaii/cfradial/phwa/rate&ZDR            zdr.colors   dB  -5 80 5 radial 1 0
 
+############################
+# NEXRAD QPE
+
+NEXQ_======== =NEXQPE=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain?use_http=true&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+
+NEXQ_PHMO_RATE_ZH     QPE_PHMO_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_RATE_HYBRID QPE_PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_PID         QPE_PHMO_PID         $(DATA_DIR)/hawaii/cfradial/phmo/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHMO_HEIGHT      QPE_PHMO_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phmo/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHMO_RATE_ZH     QPEC_PHMO_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phmo/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_RATE_HYBRID QPEC_PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phmo/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_PID         QPEC_PHMO_PID         $(DATA_DIR)/hawaii/mdv/phmo/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHMO_HEIGHT      QPEC_PHMO_HEIGHT      $(DATA_DIR)/hawaii/mdv/phmo/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
+NEXQ_PHKI_RATE_ZH     QPE_PHKI_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phki/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_RATE_HYBRID QPE_PHKI_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phki/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_PID         QPE_PHKI_PID         $(DATA_DIR)/hawaii/cfradial/phki/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKI_HEIGHT      QPE_PHKI_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phki/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHKI_RATE_ZH     QPEC_PHKI_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phki/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_RATE_HYBRID QPEC_PHKI_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phki/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_PID         QPEC_PHKI_PID         $(DATA_DIR)/hawaii/mdv/phki/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKI_HEIGHT      QPEC_PHKI_HEIGHT      $(DATA_DIR)/hawaii/mdv/phki/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
+NEXQ_PHKM_RATE_ZH     QPE_PHKM_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phkm/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_RATE_HYBRID QPE_PHKM_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phkm/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_PID         QPE_PHKM_PID         $(DATA_DIR)/hawaii/cfradial/phkm/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKM_HEIGHT      QPE_PHKM_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phkm/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHKM_RATE_ZH     QPEC_PHKM_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phkm/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_RATE_HYBRID QPEC_PHKM_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phkm/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_PID         QPEC_PHKM_PID         $(DATA_DIR)/hawaii/mdv/phkm/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKM_HEIGHT      QPEC_PHKM_HEIGHT      $(DATA_DIR)/hawaii/mdv/phkm/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
+NEXQ_PHWA_RATE_ZH     QPE_PHWA_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phwa/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_RATE_HYBRID QPE_PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phwa/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_PID         QPE_PHWA_PID         $(DATA_DIR)/hawaii/cfradial/phwa/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHWA_HEIGHT      QPE_PHWA_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phwa/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHWA_RATE_ZH     QPEC_PHWA_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_RATE_HYBRID QPEC_PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_PID         QPEC_PHWA_PID         $(DATA_DIR)/hawaii/mdv/phwa/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHWA_HEIGHT      QPEC_PHWA_HEIGHT      $(DATA_DIR)/hawaii/mdv/phwa/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
 #############################
 # NEXRAD CART MOMENTS
 
-CART_PHMO_DBZ   PHMO_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+CART_======== =NEXCART=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain?use_http=true&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
+CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+
+CART_PHWA_DBZ   PHMO_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
 CART_PHMO_VEL   PHMO_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
 CART_PHMO_WIDTH PHMO_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
 CART_PHMO_ZDR   PHMO_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
@@ -425,7 +447,7 @@ cidd.debug2_flag:           0
 #  System will startup using field 0, requesting data closest to the
 # demo time. The movie frame will be centered on the time after applying
 # temporal rounding. 
-cidd.demo_time:  00:00 08/26/2018
+cidd.demo_time:  00:00 08/24/2018
 
 # Set times to the nearest value divisible by the number of seconds
 cidd.temporal_rounding:    1
@@ -436,12 +458,12 @@ cidd.movie_frame_dir: /tmp
 
 #  This determines how many movie frames are in the loop to start with
 #  Setting this high will cause the X server to hog memory.
-cidd.starting_movie_frames:  12
+cidd.starting_movie_frames:  60
 
 # minutes per movie frame on startup
 # The display will atomatically update every this interval, throwing away its
 # oldest movie frame and creating and drawing a new one.
-cidd.time_interval:  5
+cidd.time_interval:  15
 
 # This parameter sets the maximum number of hours in the future a user can select
 # from the quick forecast menu. See SHOW_FORECAST_MENU menu bar button
