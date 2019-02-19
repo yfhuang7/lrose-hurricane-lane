@@ -47,6 +47,7 @@ field_list = {
   { "NEXRAD MOM", "NEX_" },
   { "NEXRAD RATE", "NEXR_ " },
   { "NEXRAD QPE", "NEXQ_ " },
+  { "BEAMBLOCK", "BEAMB_ " },
   { "NEXRAD cart moments", "CART_" },
   //  { "Surface", "SURF_" },
   { "Model", "MODEL_"},
@@ -203,6 +204,15 @@ NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m 
 NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
+NEXQ_MERGED_RATE_ZH     QPE_MERGED_RATE_ZH     $(DATA_DIR)/hawaii/mdv/qpe_max&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_MERGED_RATE_HYBRID QPE_MERGED_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/qpe_max&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+
 NEXQ_PHMO_RATE_ZH     QPE_PHMO_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
 NEXQ_PHMO_RATE_HYBRID QPE_PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
 NEXQ_PHMO_PID         QPE_PHMO_PID         $(DATA_DIR)/hawaii/cfradial/phmo/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
@@ -238,6 +248,29 @@ NEXQ_PHWA_RATE_ZH     QPEC_PHWA_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE
 NEXQ_PHWA_RATE_HYBRID QPEC_PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
 NEXQ_PHWA_PID         QPEC_PHWA_PID         $(DATA_DIR)/hawaii/mdv/phwa/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
 NEXQ_PHWA_HEIGHT      QPEC_PHWA_HEIGHT      $(DATA_DIR)/hawaii/mdv/phwa/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
+#############################
+# BEAM BLOCKAGE
+
+BEAMB_BEAML_PHMO  BEAML_PHMO      mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHMO&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_BEAME_PHMO  BEAME_PHMO      mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHMO&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_PEAK_PHMO   PEAK_PHMO       mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHMO&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+BEAMB_TERRAIN_PHMO TERRAIN_PHMO   mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHMO/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
+
+BEAMB_BEAML_PHKI  BEAML_PHKI      mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKI&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_BEAME_PHKI  BEAME_PHKI      mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKI&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_PEAK_PHKI   PEAK_PHKI       mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKI&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+BEAMB_TERRAIN_PHKI TERRAIN_PHKI   mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKI/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
+
+BEAMB_BEAML_PHKM   BEAML_PHKM     mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKM&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_BEAME_PHKM   BEAME_PHKM     mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKM&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_PEAK_PHKM    PEAK_PHKM      mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKM&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+BEAMB_TERRAIN_PHKM TERRAIN_PHKM   mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHKM/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
+
+BEAMB_BEAML_PHWA  BEAML_PHWA      mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHWA&BEAML   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_BEAME_PHWA  BEAME_PHWA      mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHWA&BEAME   interest.colors    percent  0 250   10 cont 1 0 
+BEAMB_PEAK_PHWA   PEAK_PHWA       mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHWA&PEAK    terrain.colors    percent  0 250   10 cont 1 0 
+BEAMB_TERRAIN_PHKM TERRAIN_PHKM   mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlock/PHWA/cart_terrain&terrain_ht terrain.colors m        0 50    10 cart 1 0
 
 #############################
 # NEXRAD CART MOMENTS
