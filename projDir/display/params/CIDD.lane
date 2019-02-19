@@ -204,10 +204,10 @@ NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m 
 NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
-NEXQ_MERGED_RATE_ZH     QPE_MERGED_RATE_ZH     $(DATA_DIR)/hawaii/mdv/qpe_max&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_MERGED_RATE_HYBRID QPE_MERGED_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/qpe_max&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_MERGED_RATE_ZH     QPE_MERGED_RATE_ZH     $(DATA_DIR)/hawaii/mdv/qpe_merge&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_MERGED_RATE_HYBRID QPE_MERGED_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/qpe_merge&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_ACCUM_DAILY_HYBRID ACCUM_DAILY_HYBRID     $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_HYBRID  precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_DAILY_ZH     ACCUM_DAILY_ZH         $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_ZH      precip_accum.colors  mm  -5 80 5 radial 1 0
 NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0

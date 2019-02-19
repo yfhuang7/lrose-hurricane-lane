@@ -69,7 +69,7 @@ instance = "qpe";
 //     REALTIME
 //
 
-mode = REALTIME;
+mode = ARCHIVE;
 
 ///////////// trigger /////////////////////////////////
 //
@@ -142,7 +142,7 @@ fcstLeadTimes = {
 // Type: int
 //
 
-time_trigger_interval = 360;
+time_trigger_interval = 300;
 
 ///////////// time_trigger_offset /////////////////////
 //
@@ -159,7 +159,7 @@ time_trigger_interval = 360;
 // Type: int
 //
 
-time_trigger_offset = 150;
+time_trigger_offset = 0;
 
 ///////////// time_trigger_margin /////////////////////
 //
@@ -173,7 +173,7 @@ time_trigger_offset = 150;
 // Type: int
 //
 
-time_trigger_margin = 1500;
+time_trigger_margin = 750;
 
 ///////////// past_only ///////////////////////////////
 //
@@ -187,7 +187,7 @@ time_trigger_margin = 1500;
 // Type: boolean
 //
 
-past_only = TRUE;
+past_only = FALSE;
 
 ///////////// min_time_between_file_triggers //////////
 //
@@ -388,34 +388,7 @@ vlevel_array = {
 merge_fields = {
   {
     name = "RATE_ZH",
-    merge_method = MERGE_CLOSEST,
-    merge_encoding = FLOAT32,
-    merge_scale = 0.5,
-    merge_bias = -32,
-    output_encoding = FLOAT32
-  }
-  ,
-  {
-    name = "RATE_Z_ZDR",
-    merge_method = MERGE_CLOSEST,
-    merge_encoding = FLOAT32,
-    merge_scale = 0.5,
-    merge_bias = -32,
-    output_encoding = FLOAT32
-  }
-  ,
-  {
-    name = "RATE_KDP",
-    merge_method = MERGE_CLOSEST,
-    merge_encoding = FLOAT32,
-    merge_scale = 0.5,
-    merge_bias = -32,
-    output_encoding = FLOAT32
-  }
-  ,
-  {
-    name = "RATE_PID",
-    merge_method = MERGE_CLOSEST,
+    merge_method = MERGE_MAX,
     merge_encoding = FLOAT32,
     merge_scale = 0.5,
     merge_bias = -32,
@@ -424,35 +397,8 @@ merge_fields = {
   ,
   {
     name = "RATE_HYBRID",
-    merge_method = MERGE_CLOSEST,
+    merge_method = MERGE_MAX,
     merge_encoding = FLOAT32,
-    merge_scale = 0.5,
-    merge_bias = -32,
-    output_encoding = FLOAT32
-  }
-  ,
-  {
-    name = "HEIGHT",
-    merge_method = MERGE_CLOSEST,
-    merge_encoding = INT16,
-    merge_scale = 0.5,
-    merge_bias = -32,
-    output_encoding = FLOAT32
-  }
-  ,
-  {
-    name = "RANGE",
-    merge_method = MERGE_CLOSEST,
-    merge_encoding = FLOAT32,
-    merge_scale = 0.5,
-    merge_bias = -32,
-    output_encoding = FLOAT32
-  }
-  ,
-  {
-    name = "PID",
-    merge_method = MERGE_CLOSEST,
-    merge_encoding = INT16,
     merge_scale = 0.5,
     merge_bias = -32,
     output_encoding = FLOAT32
@@ -521,126 +467,28 @@ range_field_name = "RANGE";
 
 input_urls = {
   {
-    url = "mdvp:://localhost::$(project)/mdv/kama/qpe",
+    url = "$(DATA_DIR)/hawaii/mdv/phki/qpe",
     field_names = "",
     is_required = FALSE,
     must_update = FALSE
   }
   ,
   {
-    url = "mdvp:://localhost::$(project)/mdv/kcys/qpe",
+    url = "$(DATA_DIR)/hawaii/mdv/phkm/qpe",
     field_names = "",
     is_required = FALSE,
     must_update = FALSE
   }
   ,
   {
-    url = "mdvp:://localhost::$(project)/mdv/kddc/qpe",
+    url = "$(DATA_DIR)/hawaii/mdv/phmo/qpe",
     field_names = "",
     is_required = FALSE,
     must_update = FALSE
   }
   ,
   {
-    url = "mdvp:://localhost::$(project)/mdv/keax/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kftg/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kgjx/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kgld/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kict/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kinx/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/klnx/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/koax/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kpux/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/ksgf/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/ktlx/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/ktwx/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kuex/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/kvnx/qpe",
-    field_names = "",
-    is_required = FALSE,
-    must_update = FALSE
-  }
-  ,
-  {
-    url = "mdvp:://localhost::$(project)/mdv/spol/qpe",
+    url = "$(DATA_DIR)/hawaii/mdv/phwa/qpe",
     field_names = "",
     is_required = FALSE,
     must_update = FALSE
@@ -664,7 +512,7 @@ input_urls = {
 // Type: string
 //
 
-output_url = "mdvp:://localhost::$(project)/mdv/qpe_mosaic";
+output_url = "$(DATA_DIR)/hawaii/mdv/qpe_merge";
 
 ///////////// output_timestamp_correction /////////////
 //
@@ -680,7 +528,7 @@ output_url = "mdvp:://localhost::$(project)/mdv/qpe_mosaic";
 // Type: int
 //
 
-output_timestamp_correction = -150;
+output_timestamp_correction = 0;
 
 ///////////// write_ldata /////////////////////////////
 //
@@ -690,7 +538,7 @@ output_timestamp_correction = -150;
 // Type: boolean
 //
 
-write_ldata = TRUE;
+write_ldata = FALSE;
 
 ///////////// write_as_forecast ///////////////////////
 //
@@ -743,8 +591,8 @@ output_projection = OUTPUT_PROJ_LATLON;
 //
 
 output_origin = {
-    lat = 40,
-    lon = -105
+  lat = 20,
+    lon = -157
 };
 
 ///////////// output_rotation /////////////////////////
@@ -803,14 +651,14 @@ output_std_parallels = {
 //
 
 output_grid = {
-    nx = 1400,
-    ny = 900,
+    nx = 2000,
+    ny = 1800,
     nz = 1,
-    minx = -106.5,
-    miny = 34,
+    minx = -162,
+    miny = 16,
     minz = 1.0,
-    dx = 0.01,
-    dy = 0.01,
+    dx = 0.005,
+    dy = 0.005,
     dz = 1.0
 };
 
@@ -839,7 +687,7 @@ output_compression = COMPRESSION_GZIP;
 // Type: string
 //
 
-output_data_set_name = "Merged-QPE";
+output_data_set_name = "Merged-QPE-HAWAII";
 
 ///////////// output_data_set_source //////////////////
 //

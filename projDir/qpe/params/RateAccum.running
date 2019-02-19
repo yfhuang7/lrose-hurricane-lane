@@ -70,7 +70,7 @@ instance = "running";
 //     REALTIME
 //
 
-mode = REALTIME;
+mode = ARCHIVE;
 
 ///////////// trigger /////////////////////////////////
 //
@@ -138,7 +138,7 @@ trigger_time_margin = 600;
 // Type: string
 //
 
-input_dir = "$(DATA_DIR)/$(project)/mdv/qpe_mosaic";
+input_dir = "$(DATA_DIR)/hawaii/mdv/qpe_merge";
 
 ///////////// field_names /////////////////////////////
 //
@@ -161,20 +161,8 @@ input_dir = "$(DATA_DIR)/$(project)/mdv/qpe_mosaic";
 
 field_names = {
   {
-    rate_name = "RATE_PID",
-    accum_name = "ACCUM_PID",
-    input_is_depth = FALSE
-  }
-  ,
-  {
     rate_name = "RATE_HYBRID",
     accum_name = "ACCUM_HYBRID",
-    input_is_depth = FALSE
-  }
-  ,
-  {
-    rate_name = "RATE_Z_ZDR",
-    accum_name = "ACCUM_Z_ZDR",
     input_is_depth = FALSE
   }
   ,
@@ -256,17 +244,17 @@ accum_method = RUNNING_ACCUM;
 running_accums = {
   {
     period_secs = 3600,
-    output_url = "$(DATA_DIR)/$(project)/mdv/qpe_accum_1hr"
+    output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_1hr"
   }
   ,
   {
     period_secs = 7200,
-    output_url = "$(DATA_DIR)/$(project)/mdv/qpe_accum_2hr"
+    output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_2hr"
   }
   ,
   {
     period_secs = 10800,
-    output_url = "$(DATA_DIR)/$(project)/mdv/qpe_accum_3hr"
+    output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_3hr"
   }
 };
 
