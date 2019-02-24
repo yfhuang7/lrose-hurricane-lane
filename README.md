@@ -113,28 +113,28 @@ As you run the analysis, the following directory structure will be created:
 #### CfRadial polar-coordinate files - radar moments
 
 ```
-  $DATA_DIR/hawaii/cfradial/phki/moments/
-  $DATA_DIR/hawaii/cfradial/phkm/moments/
-  $DATA_DIR/hawaii/cfradial/phmo/moments/
-  $DATA_DIR/hawaii/cfradial/phwa/moments/
+  $DATA_DIR/hawaii/cfradial/phki/moments
+  $DATA_DIR/hawaii/cfradial/phkm/moments
+  $DATA_DIR/hawaii/cfradial/phmo/moments
+  $DATA_DIR/hawaii/cfradial/phwa/moments
 ```
 
 #### CfRadial polar-coordinate files - precip rate in 3D
 
 ```
-  $DATA_DIR/hawaii/cfradial/phki/rate/
-  $DATA_DIR/hawaii/cfradial/phkm/rate/
-  $DATA_DIR/hawaii/cfradial/phmo/rate/
-  $DATA_DIR/hawaii/cfradial/phwa/rate/
+  $DATA_DIR/hawaii/cfradial/phki/rate
+  $DATA_DIR/hawaii/cfradial/phkm/rate
+  $DATA_DIR/hawaii/cfradial/phmo/rate
+  $DATA_DIR/hawaii/cfradial/phwa/rate
 ```
 
 #### CfRadial polar-coordinate files - QPE rate at the surface
 
 ```
-  $DATA_DIR/hawaii/cfradial/phki/qpe/
-  $DATA_DIR/hawaii/cfradial/phkm/qpe/
-  $DATA_DIR/hawaii/cfradial/phmo/qpe/
-  $DATA_DIR/hawaii/cfradial/phwa/qpe/
+  $DATA_DIR/hawaii/cfradial/phki/qpe
+  $DATA_DIR/hawaii/cfradial/phkm/qpe
+  $DATA_DIR/hawaii/cfradial/phmo/qpe
+  $DATA_DIR/hawaii/cfradial/phwa/qpe
 ```
 
 #### CF-NetCDF Cartesian files - QPE rate at the surface
@@ -163,7 +163,7 @@ As you run the analysis, the following directory structure will be created:
 
 ## Computing beam blockage
 
-Download the SRTM 1degx1deg tiles, and store write them to:
+Download the SRTM 1degx1deg tiles, and write them to:
 
 ```
   $DATA_DIR/hawaii/srtm30
@@ -216,7 +216,7 @@ To convert them into CfRadial:
 
 You should edit these scripts for the appropriate time range.
 
-Alternatively you can point directly to the NEXRAD files you want to convert.
+Alternatively you can specify the NEXRAD files you want to convert on the command line.
 
 For example:
 
@@ -230,10 +230,10 @@ For example:
 These steps should store the CfRadial nexrad files in:
 
 ```
-  $DATA_DIR/hawaii/cfradial/phki/moments/
-  $DATA_DIR/hawaii/cfradial/phkm/moments/
-  $DATA_DIR/hawaii/cfradial/phmo/moments/
-  $DATA_DIR/hawaii/cfradial/phwa/moments/
+  $DATA_DIR/hawaii/cfradial/phki/moments
+  $DATA_DIR/hawaii/cfradial/phkm/moments
+  $DATA_DIR/hawaii/cfradial/phmo/moments
+  $DATA_DIR/hawaii/cfradial/phwa/moments
 ```
 
 ## Convert sounding data to SPDB format
@@ -255,7 +255,7 @@ That should store the soundings in:
 
 You run the RadxRate application to compute precip rate in 3D CfRadial files.
 
-This also computes KDP and PID.
+This also computes KDP and PID. PID requires the temperature profile from the soundings.
 
 ```
   cd ~/git/lrose-hurricane-lane/projDir/qpe/scripts/
@@ -288,10 +288,10 @@ Alternatively, you can run these on the command line. For example for PHKI:
 The QPE rate files will be stored in:
 
 ```
-  $DATA_DIR/hawaii/cfradial/phki/rate/
-  $DATA_DIR/hawaii/cfradial/phkm/rate/
-  $DATA_DIR/hawaii/cfradial/phmo/rate/
-  $DATA_DIR/hawaii/cfradial/phwa/rate/
+  $DATA_DIR/hawaii/cfradial/phki/rate
+  $DATA_DIR/hawaii/cfradial/phkm/rate
+  $DATA_DIR/hawaii/cfradial/phmo/rate
+  $DATA_DIR/hawaii/cfradial/phwa/rate
 ```
 
 ## Compute QPE rate at the surface
@@ -329,10 +329,10 @@ Alternatively, you can run these on the command line. For example for PHKI:
 The polar-coordinate QPE rate files will be stored in:
 
 ```
-  $DATA_DIR/hawaii/cfradial/phki/qpe/
-  $DATA_DIR/hawaii/cfradial/phkm/qpe/
-  $DATA_DIR/hawaii/cfradial/phmo/qpe/
-  $DATA_DIR/hawaii/cfradial/phwa/qpe/
+  $DATA_DIR/hawaii/cfradial/phki/qpe
+  $DATA_DIR/hawaii/cfradial/phkm/qpe
+  $DATA_DIR/hawaii/cfradial/phmo/qpe
+  $DATA_DIR/hawaii/cfradial/phwa/qpe
 ```
 
 The CF-NetCDF Cartesian QPE files will be stored in:
@@ -369,7 +369,7 @@ Or run it on the command line:
 The merged Cartesian files will be written to:
 
 ```
-   $DATA_DIR/hawaii/mdv/qpe_merge/
+  $DATA_DIR/hawaii/mdv/qpe_merge
 ```
 
 ## Compute Precipitation Accumulation over time
