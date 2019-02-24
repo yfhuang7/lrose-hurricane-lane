@@ -409,8 +409,19 @@ The accumulation files will be stored in:
 
 ## Images
 
+### Beam blockage, PHKI, 0.8 deg
+
 ![Beam blockage, PHKI, 0.8 deg](./images/beam_blockage.phki.png)
+
+### Beam blockage, PHKM, 0.8 deg
+
 ![Beam blockage, PHKM, 0.8 deg](./images/beam_blockage.phkm.png)
+
+### Beam blockage, PHMO, 0.8 deg
+
 ![Beam blockage, PHMO, 0.8 deg](./images/beam_blockage.phmo.png)
+
+### Beam blockage, PHWA, 0.8 deg
+
 ![Beam blockage, PHWA, 0.8 deg](./images/beam_blockage.phwa.png)
 
