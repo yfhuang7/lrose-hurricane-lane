@@ -30,7 +30,7 @@ For example, in bash:
 and in csh or tcsh:
 
 ```
-  set DATA_DIR $HOME/data
+  setenv DATA_DIR $HOME/data
 ```
 
 You do not need to use $HOME/data - that is just an example.
@@ -68,7 +68,6 @@ Store in:
   $DATA_DIR/hawaii/raw/nexrad/PHKM
   $DATA_DIR/hawaii/raw/nexrad/PHMO
   $DATA_DIR/hawaii/raw/nexrad/PHWA
-
 ```
 
 ### Sounding data from U-Wyoming
@@ -88,7 +87,6 @@ For example:
 ```
  $DATA_DIR/hawaii/raw/sounding/nws/20180820_20180830.phli.ttaa
  $DATA_DIR/hawaii/raw/sounding/nws/20180820_20180830.phto.ttaa
-
 ```
 
 If your data spans more than one month, create a file for each month separately. This is required because the TTAA messages do not contain the year and month, so we have to determine that from the file name.
@@ -104,7 +102,6 @@ As you run the analysis, the following directory structure will be created:
   $DATA_DIR/hawaii/BeamBlock/PHKM
   $DATA_DIR/hawaii/BeamBlock/PHMO
   $DATA_DIR/hawaii/BeamBlock/PHWA
-
 ```
 
 #### Sounding data in SPDB format:
@@ -185,7 +182,6 @@ and run:
   run_RadxBeamBlock.phkm
   run_RadxBeamBlock.phmo
   run_RadxBeamBlock.phwa
-
 ```
 
 This will create the CfRadial beam blockage files in:
@@ -195,7 +191,6 @@ This will create the CfRadial beam blockage files in:
   $DATA_DIR/hawaii/BeamBlock/PHKM
   $DATA_DIR/hawaii/BeamBlock/PHMO
   $DATA_DIR/hawaii/BeamBlock/PHWA
-
 ```
 
 ## Converting the NEXRAD RAW files into CfRadial files
@@ -207,7 +202,6 @@ Your NEXRAD files should be in:
   $DATA_DIR/hawaii/raw/nexrad/PHKM
   $DATA_DIR/hawaii/raw/nexrad/PHMO
   $DATA_DIR/hawaii/raw/nexrad/PHWA
-
 ```
 
 To convert them into CfRadial:
@@ -218,7 +212,6 @@ To convert them into CfRadial:
   run_RadxConvert.phkm
   run_RadxConvert.phmo
   run_RadxConvert.phwa
-
 ```
 
 You should edit these scripts for the appropriate time range.
