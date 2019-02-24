@@ -1009,6 +1009,7 @@ cidd.max_ring_range:        250.0
 
 #  Render Range rings at the origin of the data, instead of the origin of the display.
 cidd.range_ring_follows_data: 1
+cidd.range_ring_for_radar_only: 1
 
 #  Shift the Domain if the data shifts.
 cidd.domain_follows_data: 0
