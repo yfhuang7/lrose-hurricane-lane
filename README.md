@@ -155,7 +155,7 @@ As you run the analysis, the following directory structure will be created:
    $DATA_DIR/hawaii/mdv/qpe_merge/
 ```
 
-#### CF-NetCDF Cartesian files - QPE accumulation depth
+#### CF-NetCDF Cartesian files - QPE accumulation depth, merged domain
 
 ```
    $DATA_DIR/hawaii/mdv/qpe_accum_1hr
@@ -164,6 +164,252 @@ As you run the analysis, the following directory structure will be created:
    $DATA_DIR/hawaii/mdv/qpe_accum_daily
 ```
 
+## Computing beam blockage
 
+Download the SRTM 1degx1deg tiles, and store write them to:
+
+```
+  $DATA_DIR/hawaii/srtm30
+```
+
+Then:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/beamBlock/scripts/
+```
+
+and run:
+
+```
+  run_RadxBeamBlock.phki
+  run_RadxBeamBlock.phkm
+  run_RadxBeamBlock.phmo
+  run_RadxBeamBlock.phwa
+
+```
+
+This will create the CfRadial beam blockage files in:
+
+```
+  $DATA_DIR/hawaii/BeamBlock/PHKI
+  $DATA_DIR/hawaii/BeamBlock/PHKM
+  $DATA_DIR/hawaii/BeamBlock/PHMO
+  $DATA_DIR/hawaii/BeamBlock/PHWA
+
+```
+
+## Converting the NEXRAD RAW files into CfRadial files
+
+Your NEXRAD files should be in:
+
+```
+  $DATA_DIR/hawaii/raw/nexrad/PHKI
+  $DATA_DIR/hawaii/raw/nexrad/PHKM
+  $DATA_DIR/hawaii/raw/nexrad/PHMO
+  $DATA_DIR/hawaii/raw/nexrad/PHWA
+
+```
+
+To convert them into CfRadial:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/ingest/scripts
+  run_RadxConvert.phki
+  run_RadxConvert.phkm
+  run_RadxConvert.phmo
+  run_RadxConvert.phwa
+
+```
+
+You should edit these scripts for the appropriate time range.
+
+Alternatively you can point directly to the NEXRAD files you want to convert.
+
+For example:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/ingest/params
+  export radar_name=phki
+  export RADAR_NAME=PHKI
+  RadxConvert -params RadxConvert.hawaii -f PHKI-raw-files
+```
+
+These steps should store the CfRadial nexrad files in:
+
+```
+  $DATA_DIR/hawaii/cfradial/phki/moments/
+  $DATA_DIR/hawaii/cfradial/phkm/moments/
+  $DATA_DIR/hawaii/cfradial/phmo/moments/
+  $DATA_DIR/hawaii/cfradial/phwa/moments/
+```
+
+## Convert sounding data to SPDB format
+
+For example:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/ingest/params
+  NWSsoundingIngest -params NWSsoundingIngest.hawaii -debug -f $DATA_DIR/hawaii/raw/sounding/nws/20180820_20180830.phli.ttaa
+```
+
+That should store the soundings in:
+
+```
+  $DATA_DIR/hawaii/spdb/sounding
+```
+
+## Compute precip rate
+
+You run the RadxRate application to compute precip rate in 3D CfRadial files.
+
+This also computes KDP and PID.
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/scripts/
+  run_RadxRate.phki.lane
+  run_RadxRate.phkm.lane
+  run_RadxRate.phmo.lane
+  run_RadxRate.phwa.lane
+```
+
+You will need to edit these scripts to set the appropriate time period.
+
+These scripts write their output to log files.
+You can view the progress by tailing the log files.
+For example:
+
+```
+  tail -f /tmp/RadxRate.hawaii.phki.log
+```
+
+Alternatively, you can run these on the command line. For example for PHKI:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/params/
+  export radar_name=phki
+  export RADAR_NAME=PHKI
+  export SOUNDING_NAME=PHLI
+  RadxRate -params RadxRate.hawaii -start "2018 08 20 00 00 00" -end "2018 08 30 00 00 00" 
+```
+
+The QPE rate files will be stored in:
+
+```
+  $DATA_DIR/hawaii/cfradial/phki/rate/
+  $DATA_DIR/hawaii/cfradial/phkm/rate/
+  $DATA_DIR/hawaii/cfradial/phmo/rate/
+  $DATA_DIR/hawaii/cfradial/phwa/rate/
+```
+
+## Compute QPE rate at the surface
+
+You run the RadxQpe application to compute 2D precip rate at the surface.
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/scripts/
+  run_RadxQpe.phki.lane
+  run_RadxQpe.phkm.lane
+  run_RadxQpe.phmo.lane
+  run_RadxQpe.phwa.lane
+```
+
+You will need to edit these scripts to set the appropriate time period.
+
+These scripts write their output to log files.
+You can view the progress by tailing the log files.
+For example:
+
+```
+  tail -f /tmp/RadxQpe.hawaii.phki.log
+```
+
+Alternatively, you can run these on the command line. For example for PHKI:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/params/
+  export radar_name=phki
+  export RADAR_NAME=PHKI
+  export SOUNDING_NAME=PHLI
+  RadxQpe -params RadxQpe.hawaii -start "2018 08 20 00 00 00" -end "2018 08 30 00 00 00" 
+```
+
+The polar-coordinate QPE rate files will be stored in:
+
+```
+  $DATA_DIR/hawaii/cfradial/phki/qpe/
+  $DATA_DIR/hawaii/cfradial/phkm/qpe/
+  $DATA_DIR/hawaii/cfradial/phmo/qpe/
+  $DATA_DIR/hawaii/cfradial/phwa/qpe/
+```
+
+The CF-NetCDF Cartesian QPE files will be stored in:
+
+```
+  $DATA_DIR/hawaii/mdv/phki/qpe
+  $DATA_DIR/hawaii/mdv/phkm/qpe
+  $DATA_DIR/hawaii/mdv/phmo/qpe
+  $DATA_DIR/hawaii/mdv/phwa/qpe
+```
+
+## Merging the individual-radar Cartesian QPE files into a merged mosaic
+
+You should use the MdvMerge2 application to merge the QPE rates into a mosaic, before computing the accumulation from the rates.
+
+For overlapping areas, the mosaic contains the maximum value from the individual radars at each grid point.
+
+To run the merge:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/scripts
+  run_MdvMerge2.qpe
+```
+
+As before, edit this script to set the time range appropriately.
+
+Or run it on the command line:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/params
+  MdvMerge2 -params MdvMerge2.qpe -debug -start "2018 08 20 00 00 00" 
+```
+
+The merged Cartesian files will be written to:
+
+```
+   $DATA_DIR/hawaii/mdv/qpe_merge/
+```
+
+## Compute Precipitation Accumulation over time
+
+The RateAccum application integrates the precip rate over time, to give estimated precitation depth.
+
+The configuration files are set up to compute running accumulation over 1, 2 and 3 hour periods, as well as a 24-hour accumulation at the end of each day.
+
+You can edit the parameter files to modify this behavior as needed.
+
+To run the accumulation step:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/scripts/
+  run_RateAccum.daily
+  run_RateAccum.running
+```
+
+Or alternatively on the command line:
+
+```
+  cd ~/git/lrose-hurricane-lane/projDir/qpe/params
+  RateAccum -params RateAccum.daily -debug -start "2018 08 20 00 00 00" -end "2018 08 30 00 00 00"
+  RateAccum -params RateAccum.running -debug -start "2018 08 20 00 00 00" -end "2018 08 30 00 00 00"
+```
+
+The accumulation files will be stored in:
+
+```
+   $DATA_DIR/hawaii/mdv/qpe_accum_1hr
+   $DATA_DIR/hawaii/mdv/qpe_accum_2hr
+   $DATA_DIR/hawaii/mdv/qpe_accum_3hr
+   $DATA_DIR/hawaii/mdv/qpe_accum_daily
+```
 
 
