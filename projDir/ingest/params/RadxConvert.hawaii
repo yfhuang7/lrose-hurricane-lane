@@ -52,8 +52,8 @@ instance = "$(radar_name)";
 // Type: string
 //
 
-// input_dir = "$(DATA_DIR)/hawaii/raw/$(RADAR_NAME)";
-input_dir = "/net/ldm/data/gempak/nexrad/craft/$(RADAR_NAME)";
+input_dir = "$(DATA_DIR)/hawaii/raw/nexrad/$(RADAR_NAME)";
+// input_dir = "/net/ldm/data/gempak/nexrad/craft/$(RADAR_NAME)";
 
 ///////////// mode ////////////////////////////////////
 //
