@@ -407,4 +407,10 @@ The accumulation files will be stored in:
    $DATA_DIR/hawaii/mdv/qpe_accum_daily
 ```
 
+## Images
+
+![Beam blockage, PHKI, 0.8 deg](./images/beam_blockage.phki.png)
+![Beam blockage, PHKM, 0.8 deg](./images/beam_blockage.phkm.png)
+![Beam blockage, PHMO, 0.8 deg](./images/beam_blockage.phmo.png)
+![Beam blockage, PHWA, 0.8 deg](./images/beam_blockage.phwa.png)
 
