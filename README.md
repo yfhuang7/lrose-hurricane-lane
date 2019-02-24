@@ -298,6 +298,8 @@ The QPE rate files will be stored in:
 
 You run the RadxQpe application to compute 2D precip rate at the surface.
 
+See [RadxQpe.pdf](./RadxQpe.pdf) for details.
+
 ```
   cd ~/git/lrose-hurricane-lane/projDir/qpe/scripts/
   run_RadxQpe.phki.lane
