@@ -425,3 +425,54 @@ The accumulation files will be stored in:
 
 ![Beam blockage, PHWA, 0.8 deg](./images/beam_blockage.phwa.png)
 
+### Long range DBZ example, PHKM
+
+![DBZ example, PHKM](./images/dbz_example.phkm.png)
+
+### Long DBZ example, PHMO
+
+![DBZ example, PHMO](./images/dbz_example.phmo.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/20
+
+![24-hr accumulation, HYBRID, 2018/08/20](./images/qpe_accum_20180820.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/21
+
+![24-hr accumulation, HYBRID, 2018/08/21](./images/qpe_accum_20180821.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/22
+
+![24-hr accumulation, HYBRID, 2018/08/22](./images/qpe_accum_20180822.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/23
+
+![24-hr accumulation, HYBRID, 2018/08/23](./images/qpe_accum_20180823.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/24
+
+![24-hr accumulation, HYBRID, 2018/08/24](./images/qpe_accum_20180824.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/25
+
+![24-hr accumulation, HYBRID, 2018/08/25](./images/qpe_accum_20180825.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/26
+
+![24-hr accumulation, HYBRID, 2018/08/26](./images/qpe_accum_20180826.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/27
+
+![24-hr accumulation, HYBRID, 2018/08/27](./images/qpe_accum_20180827.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/28
+
+![24-hr accumulation, HYBRID, 2018/08/28](./images/qpe_accum_20180828.png)
+
+### 24-hr accumulation, HYBRID, 2018/08/29
+
+![24-hr accumulation, HYBRID, 2018/08/29](./images/qpe_accum_20180829.png)
+
+
+
+
