@@ -1,0 +1,8 @@
+#! /bin/csh
+
+cd $HOME/git/lrose-hurricane-lane/projDir/ingest/params
+
+setenv radar_name phwa
+setenv RADAR_NAME PHWA
+
+RadxConvert -params RadxConvert.hawaii -start "2018 08 20 00 00 00" -end "2018 08 30 00 00 00"

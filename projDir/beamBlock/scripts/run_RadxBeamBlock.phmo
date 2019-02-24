@@ -1,5 +1,5 @@
 #! /bin/csh
 
-cd $PROJ_DIR/beamBlock/params
+cd $HOME/git/lrose-hurricane-lane/projDir/beamBlock/params
 
 RadxBeamBlock -params RadxBeamBlock.phmo

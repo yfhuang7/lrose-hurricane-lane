@@ -52,6 +52,7 @@ instance = "$(radar_name)";
 // Type: string
 //
 
+// input_dir = "$(DATA_DIR)/hawaii/raw/$(RADAR_NAME)";
 input_dir = "/net/ldm/data/gempak/nexrad/craft/$(RADAR_NAME)";
 
 ///////////// mode ////////////////////////////////////
@@ -72,7 +73,7 @@ input_dir = "/net/ldm/data/gempak/nexrad/craft/$(RADAR_NAME)";
 //     FILELIST
 //
 
-mode = REALTIME;
+mode = ARCHIVE;
 
 ///////////// max_realtime_data_age_secs //////////////
 //
