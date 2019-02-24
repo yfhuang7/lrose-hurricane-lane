@@ -44,12 +44,11 @@
 //
 
 field_list = {
-  { "NEXRAD MOM", "NEX_" },
-  { "NEXRAD RATE", "NEXR_ " },
   { "NEXRAD QPE", "NEXQ_ " },
+  { "NEXRAD RATE", "NEXR_ " },
+  { "NEXRAD MOM", "NEX_" },
   { "BEAMBLOCK", "BEAMB_ " },
   { "NEXRAD cart moments", "CART_" },
-  //  { "Surface", "SURF_" },
   { "Model", "MODEL_"},
   { "Satellite", "SAT_"}
 };
@@ -105,8 +104,74 @@ field_list = {
 # HAWAII
 #
 
+############################
+# NEXRAD QPE
+
+NEXQ_MERGED_RATE_ZH     QPE_MERGED_RATE_ZH     $(DATA_DIR)/hawaii/mdv/qpe_merge&RATE_ZH             precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_MERGED_RATE_HYBRID QPE_MERGED_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/qpe_merge&RATE_HYBRID         precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_ACCUM_DAILY_HYBRID ACCUM_DAILY_HYBRID     $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_HYBRID  precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_DAILY_ZH     ACCUM_DAILY_ZH         $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_ZH      precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+
+NEXQ_ACCUM_1HR          ACCUM_1HR_HYBRID       $(DATA_DIR)/hawaii/mdv/qpe_accum_1hr&ACCUM_HYBRID  precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_1HR_ZH       ACCUM_1HR_ZH           $(DATA_DIR)/hawaii/mdv/qpe_accum_1hr&ACCUM_ZH      precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_2HR          ACCUM_2HR_HYBRID       $(DATA_DIR)/hawaii/mdv/qpe_accum_2hr&ACCUM_HYBRID  precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_2HR_ZH       ACCUM_2HR_ZH           $(DATA_DIR)/hawaii/mdv/qpe_accum_2hr&ACCUM_ZH      precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_3HR          ACCUM_3HR_HYBRID       $(DATA_DIR)/hawaii/mdv/qpe_accum_3hr&ACCUM_HYBRID  precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_3HR_ZH       ACCUM_3HR_ZH           $(DATA_DIR)/hawaii/mdv/qpe_accum_3hr&ACCUM_ZH      precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_DAILY_HYBRID ACCUM_DAILY_HYBRID     $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_HYBRID  precip_accum.colors  mm  -5 80 5 radial 1 0
+NEXQ_ACCUM_DAILY_ZH     ACCUM_DAILY_ZH         $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_ZH      precip_accum.colors  mm  -5 80 5 radial 1 0
+
+NEXQ_PHMO_RATE_ZH     QPE_PHMO_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_RATE_HYBRID QPE_PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_PID         QPE_PHMO_PID         $(DATA_DIR)/hawaii/cfradial/phmo/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHMO_HEIGHT      QPE_PHMO_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phmo/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHMO_RATE_ZH     QPEC_PHMO_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phmo/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_RATE_HYBRID QPEC_PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phmo/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHMO_PID         QPEC_PHMO_PID         $(DATA_DIR)/hawaii/mdv/phmo/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHMO_HEIGHT      QPEC_PHMO_HEIGHT      $(DATA_DIR)/hawaii/mdv/phmo/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
+NEXQ_PHKI_RATE_ZH     QPE_PHKI_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phki/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_RATE_HYBRID QPE_PHKI_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phki/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_PID         QPE_PHKI_PID         $(DATA_DIR)/hawaii/cfradial/phki/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKI_HEIGHT      QPE_PHKI_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phki/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHKI_RATE_ZH     QPEC_PHKI_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phki/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_RATE_HYBRID QPEC_PHKI_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phki/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKI_PID         QPEC_PHKI_PID         $(DATA_DIR)/hawaii/mdv/phki/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKI_HEIGHT      QPEC_PHKI_HEIGHT      $(DATA_DIR)/hawaii/mdv/phki/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
+NEXQ_PHKM_RATE_ZH     QPE_PHKM_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phkm/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_RATE_HYBRID QPE_PHKM_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phkm/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_PID         QPE_PHKM_PID         $(DATA_DIR)/hawaii/cfradial/phkm/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKM_HEIGHT      QPE_PHKM_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phkm/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHKM_RATE_ZH     QPEC_PHKM_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phkm/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_RATE_HYBRID QPEC_PHKM_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phkm/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHKM_PID         QPEC_PHKM_PID         $(DATA_DIR)/hawaii/mdv/phkm/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHKM_HEIGHT      QPEC_PHKM_HEIGHT      $(DATA_DIR)/hawaii/mdv/phkm/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
+NEXQ_PHWA_RATE_ZH     QPE_PHWA_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phwa/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_RATE_HYBRID QPE_PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phwa/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_PID         QPE_PHWA_PID         $(DATA_DIR)/hawaii/cfradial/phwa/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHWA_HEIGHT      QPE_PHWA_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phwa/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+NEXQ_PHWA_RATE_ZH     QPEC_PHWA_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_RATE_HYBRID QPEC_PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
+NEXQ_PHWA_PID         QPEC_PHWA_PID         $(DATA_DIR)/hawaii/mdv/phwa/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
+NEXQ_PHWA_HEIGHT      QPEC_PHWA_HEIGHT      $(DATA_DIR)/hawaii/mdv/phwa/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
+
 #############################
 # NEXRAD MOMENTS
+
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
+NEX_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
 NEX_PHMO_DBZ   PHMO_DBZ    $(DATA_DIR)/hawaii/cfradial/phmo/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
 NEX_PHMO_VEL   PHMO_VEL    $(DATA_DIR)/hawaii/cfradial/phmo/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
@@ -114,8 +179,8 @@ NEX_PHMO_WIDTH PHMO_WIDTH  $(DATA_DIR)/hawaii/cfradial/phmo/moments&WIDTH       
 NEX_PHMO_ZDR   PHMO_ZDR    $(DATA_DIR)/hawaii/cfradial/phmo/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
 NEX_PHMO_PHIDP PHMO_PHIDP  $(DATA_DIR)/hawaii/cfradial/phmo/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
 NEX_PHMO_RHOHV PHMO_RHOHV  $(DATA_DIR)/hawaii/cfradial/phmo/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
 NEX_PHKI_DBZ   PHKI_DBZ    $(DATA_DIR)/hawaii/cfradial/phki/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
 NEX_PHKI_VEL   PHKI_VEL    $(DATA_DIR)/hawaii/cfradial/phki/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
@@ -123,8 +188,8 @@ NEX_PHKI_WIDTH PHKI_WIDTH  $(DATA_DIR)/hawaii/cfradial/phki/moments&WIDTH       
 NEX_PHKI_ZDR   PHKI_ZDR    $(DATA_DIR)/hawaii/cfradial/phki/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
 NEX_PHKI_PHIDP PHKI_PHIDP  $(DATA_DIR)/hawaii/cfradial/phki/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
 NEX_PHKI_RHOHV PHKI_RHOHV  $(DATA_DIR)/hawaii/cfradial/phki/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
 NEX_PHKM_DBZ   PHKM_DBZ    $(DATA_DIR)/hawaii/cfradial/phkm/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
 NEX_PHKM_VEL   PHKM_VEL    $(DATA_DIR)/hawaii/cfradial/phkm/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
@@ -132,8 +197,8 @@ NEX_PHKM_WIDTH PHKM_WIDTH  $(DATA_DIR)/hawaii/cfradial/phkm/moments&WIDTH       
 NEX_PHKM_ZDR   PHKM_ZDR    $(DATA_DIR)/hawaii/cfradial/phkm/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
 NEX_PHKM_PHIDP PHKM_PHIDP  $(DATA_DIR)/hawaii/cfradial/phkm/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
 NEX_PHKM_RHOHV PHKM_RHOHV  $(DATA_DIR)/hawaii/cfradial/phkm/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
 NEX_PHWA_DBZ   PHWA_DBZ    $(DATA_DIR)/hawaii/cfradial/phwa/moments&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
 NEX_PHWA_VEL   PHWA_VEL    $(DATA_DIR)/hawaii/cfradial/phwa/moments&VEL       vel.colors   m/s -5 80 5 radial 1 0
@@ -141,13 +206,13 @@ NEX_PHWA_WIDTH PHWA_WIDTH  $(DATA_DIR)/hawaii/cfradial/phwa/moments&WIDTH       
 NEX_PHWA_ZDR   PHWA_ZDR    $(DATA_DIR)/hawaii/cfradial/phwa/moments&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
 NEX_PHWA_PHIDP PHWA_PHIDP  $(DATA_DIR)/hawaii/cfradial/phwa/moments&PHIDP       phidp.colors deg -5 80 5 radial 1 0
 NEX_PHWA_RHOHV PHWA_RHOHV  $(DATA_DIR)/hawaii/cfradial/phwa/moments&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-NEX_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer/moments?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
+NEX_========   ========    $(DATA_DIR)/spacer/moments&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
 ############################
 # NEXRAD RATE
 
-NEXR_======== =NEXRATE=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain?use_http=true&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
+NEXR_======== =NEXRATE=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
 NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 NEXR_======== =NEXRATE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
@@ -192,63 +257,6 @@ NEXR_PHWA_DBZ         PHWA_DBZ         $(DATA_DIR)/hawaii/cfradial/phwa/rate&DBZ
 NEXR_PHWA_WIDTH       PHWA_WIDTH       $(DATA_DIR)/hawaii/cfradial/phwa/rate&WIDTH          width.colors m/s -5 80 5 radial 1 0
 NEXR_PHWA_ZDR         PHWA_ZDR         $(DATA_DIR)/hawaii/cfradial/phwa/rate&ZDR            zdr.colors   dB  -5 80 5 radial 1 0
 
-############################
-# NEXRAD QPE
-
-NEXQ_======== =NEXQPE=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain?use_http=true&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-
-NEXQ_MERGED_RATE_ZH     QPE_MERGED_RATE_ZH     $(DATA_DIR)/hawaii/mdv/qpe_merge&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_MERGED_RATE_HYBRID QPE_MERGED_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/qpe_merge&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_ACCUM_DAILY_HYBRID ACCUM_DAILY_HYBRID     $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_HYBRID  precip_accum.colors  mm  -5 80 5 radial 1 0
-NEXQ_ACCUM_DAILY_ZH     ACCUM_DAILY_ZH         $(DATA_DIR)/hawaii/mdv/qpe_accum_daily&ACCUM_ZH      precip_accum.colors  mm  -5 80 5 radial 1 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-NEXQ_======== =NEXQPE=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
-
-NEXQ_PHMO_RATE_ZH     QPE_PHMO_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHMO_RATE_HYBRID QPE_PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phmo/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHMO_PID         QPE_PHMO_PID         $(DATA_DIR)/hawaii/cfradial/phmo/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHMO_HEIGHT      QPE_PHMO_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phmo/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-NEXQ_PHMO_RATE_ZH     QPEC_PHMO_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phmo/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHMO_RATE_HYBRID QPEC_PHMO_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phmo/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHMO_PID         QPEC_PHMO_PID         $(DATA_DIR)/hawaii/mdv/phmo/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHMO_HEIGHT      QPEC_PHMO_HEIGHT      $(DATA_DIR)/hawaii/mdv/phmo/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-
-NEXQ_PHKI_RATE_ZH     QPE_PHKI_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phki/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKI_RATE_HYBRID QPE_PHKI_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phki/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKI_PID         QPE_PHKI_PID         $(DATA_DIR)/hawaii/cfradial/phki/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHKI_HEIGHT      QPE_PHKI_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phki/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-NEXQ_PHKI_RATE_ZH     QPEC_PHKI_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phki/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKI_RATE_HYBRID QPEC_PHKI_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phki/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKI_PID         QPEC_PHKI_PID         $(DATA_DIR)/hawaii/mdv/phki/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHKI_HEIGHT      QPEC_PHKI_HEIGHT      $(DATA_DIR)/hawaii/mdv/phki/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-
-NEXQ_PHKM_RATE_ZH     QPE_PHKM_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phkm/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKM_RATE_HYBRID QPE_PHKM_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phkm/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKM_PID         QPE_PHKM_PID         $(DATA_DIR)/hawaii/cfradial/phkm/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHKM_HEIGHT      QPE_PHKM_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phkm/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-NEXQ_PHKM_RATE_ZH     QPEC_PHKM_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phkm/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKM_RATE_HYBRID QPEC_PHKM_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phkm/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHKM_PID         QPEC_PHKM_PID         $(DATA_DIR)/hawaii/mdv/phkm/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHKM_HEIGHT      QPEC_PHKM_HEIGHT      $(DATA_DIR)/hawaii/mdv/phkm/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-
-NEXQ_PHWA_RATE_ZH     QPE_PHWA_RATE_ZH     $(DATA_DIR)/hawaii/cfradial/phwa/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHWA_RATE_HYBRID QPE_PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/cfradial/phwa/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHWA_PID         QPE_PHWA_PID         $(DATA_DIR)/hawaii/cfradial/phwa/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHWA_HEIGHT      QPE_PHWA_HEIGHT      $(DATA_DIR)/hawaii/cfradial/phwa/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-NEXQ_PHWA_RATE_ZH     QPEC_PHWA_RATE_ZH     $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE_ZH        precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHWA_RATE_HYBRID QPEC_PHWA_RATE_HYBRID $(DATA_DIR)/hawaii/mdv/phwa/qpe&RATE_HYBRID    precip_rate.colors  mm/hr  -5 80 5 radial 1 0
-NEXQ_PHWA_PID         QPEC_PHWA_PID         $(DATA_DIR)/hawaii/mdv/phwa/qpe&PID            pid.colors    -      -5 80 5 radial 1 0
-NEXQ_PHWA_HEIGHT      QPEC_PHWA_HEIGHT      $(DATA_DIR)/hawaii/mdv/phwa/qpe&HEIGHT         heights_km.colors    km -5 80 5 radial 1 0
-
 #############################
 # BEAM BLOCKAGE
 
@@ -275,7 +283,7 @@ BEAMB_TERRAIN_PHKM TERRAIN_PHKM   mdvp:://localhost:0:$(DATA_DIR)/hawaii/BeamBlo
 #############################
 # NEXRAD CART MOMENTS
 
-CART_======== =NEXCART=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain?use_http=true&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
+CART_======== =NEXCART=  mdvp:://front.eol.ucar.edu:8080:hawaii/cfradial/phki/partrain&KDP          kdp_sband.colors    deg/km -5 80 5 radial 1 0
 CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
@@ -284,46 +292,46 @@ CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m
 CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 CART_======== =NEXCART=  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
-CART_PHWA_DBZ   PHMO_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-CART_PHMO_VEL   PHMO_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-CART_PHMO_WIDTH PHMO_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-CART_PHMO_ZDR   PHMO_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-CART_PHMO_RHOHV PHMO_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_PHWA_DBZ   PHMO_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+CART_PHMO_VEL   PHMO_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo&VEL       vel.colors   m/s -5 80 5 radial 1 0
+CART_PHMO_WIDTH PHMO_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo&WIDTH        width.colors m/s -5 80 5 radial 1 0
+CART_PHMO_ZDR   PHMO_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+CART_PHMO_RHOHV PHMO_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phmo&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
-CART_PHKI_DBZ   PHKI_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-CART_PHKI_VEL   PHKI_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-CART_PHKI_WIDTH PHKI_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-CART_PHKI_ZDR   PHKI_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-CART_PHKI_RHOHV PHKI_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_PHKI_DBZ   PHKI_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+CART_PHKI_VEL   PHKI_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki&VEL       vel.colors   m/s -5 80 5 radial 1 0
+CART_PHKI_WIDTH PHKI_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki&WIDTH        width.colors m/s -5 80 5 radial 1 0
+CART_PHKI_ZDR   PHKI_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+CART_PHKI_RHOHV PHKI_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phki&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
-CART_PHKM_DBZ   PHKM_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-CART_PHKM_VEL   PHKM_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-CART_PHKM_WIDTH PHKM_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-CART_PHKM_ZDR   PHKM_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-CART_PHKM_RHOHV PHKM_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_PHKM_DBZ   PHKM_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+CART_PHKM_VEL   PHKM_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm&VEL       vel.colors   m/s -5 80 5 radial 1 0
+CART_PHKM_WIDTH PHKM_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm&WIDTH        width.colors m/s -5 80 5 radial 1 0
+CART_PHKM_ZDR   PHKM_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+CART_PHKM_RHOHV PHKM_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phkm&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
-CART_PHWA_DBZ   PHWA_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa?use_http=true&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
-CART_PHWA_VEL   PHWA_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa?use_http=true&VEL       vel.colors   m/s -5 80 5 radial 1 0
-CART_PHWA_WIDTH PHWA_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa?use_http=true&WIDTH        width.colors m/s -5 80 5 radial 1 0
-CART_PHWA_ZDR   PHWA_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa?use_http=true&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
-CART_PHWA_RHOHV PHWA_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa?use_http=true&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
-CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_PHWA_DBZ   PHWA_DBZ    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa&DBZ       dbz.colors   dBZ -5 80 5 radial 1 0
+CART_PHWA_VEL   PHWA_VEL    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa&VEL       vel.colors   m/s -5 80 5 radial 1 0
+CART_PHWA_WIDTH PHWA_WIDTH  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa&WIDTH        width.colors m/s -5 80 5 radial 1 0
+CART_PHWA_ZDR   PHWA_ZDR    mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa&ZDR       zdr.colors   dB  -5 80 5 radial 1 0
+CART_PHWA_RHOHV PHWA_RHOHV  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/radarCart/phwa&RHOHV       rhohv.colors -   -5 80 5 radial 1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
+CART_========   ========    $(DATA_DIR)/spacer&Elevation       none.colors  m   -5 80 5 dcont  1 0
 
 ############################
 # SURFACE data
 
-# SURF_===== ==Surf==   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp?use_http=true&Temp        temp.colors m -5 80 5 dcont 1 0
+# SURF_===== ==Surf==   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp&Temp        temp.colors m -5 80 5 dcont 1 0
 # SURF_===== ==Surf==   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 # SURF_===== ==Surf==   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 # SURF_===== ==Surf==   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
@@ -332,10 +340,10 @@ CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_ht
 # SURF_===== ==Surf==   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 # SURF_===== ==Surf==   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
-# SURF_Temp  SURF_Temp  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp?use_http=true&Temp        temp.colors m -5 80 5 dcont 1 0
-# SURF_DewPt SURF_DewPt mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp?use_http=true&DewPoint    temp.colors m -5 80 5 dcont 1 0
-# SURF_Conv  SURF_Conv  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp?use_http=true&Convergence conv.colors m -5 80 5 dcont 1 0
-# SURF_Terrain Terrain  mdvp::terrain//front.eol.ucar.edu:8080:hawaii/mdv/terrain?use_http=true&Elevation     terrain_front.colors m -5 80 5 dcont 1 0
+# SURF_Temp  SURF_Temp  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp&Temp        temp.colors m -5 80 5 dcont 1 0
+# SURF_DewPt SURF_DewPt mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp&DewPoint    temp.colors m -5 80 5 dcont 1 0
+# SURF_Conv  SURF_Conv  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/surf_interp&Convergence conv.colors m -5 80 5 dcont 1 0
+# SURF_Terrain Terrain  mdvp::terrain//front.eol.ucar.edu:8080:hawaii/mdv/terrain&Elevation     terrain_front.colors m -5 80 5 dcont 1 0
 # SURF_===== ========   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 # SURF_===== ========   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 # SURF_===== ========   mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
@@ -344,7 +352,7 @@ CART_========   ========    mdvp::static//front.eol.ucar.edu:8080:/spacer?use_ht
 ############################
 # Model data
 
-MODEL_==== ==Model==  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/ruc?use_http=true&TMP  temp.colors   C   -5   80  5  dcont   1 0
+MODEL_==== ==Model==  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/ruc&TMP  temp.colors   C   -5   80  5  dcont   1 0
 MODEL_==== ==Model==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 MODEL_==== ==Model==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 MODEL_==== ==Model==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
@@ -353,19 +361,19 @@ MODEL_==== ==Model==  mdvp::static//localhost::/spacer?&None  none.colors   m   
 MODEL_==== ==Model==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 MODEL_==== ==Model==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
-MODEL_GFS-TMP   GFS-TMP  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii?use_http=true&TMP  temp.colors   C   -5   80  5  dcont   1 0
-MODEL_GFS-RH    GFS-RH   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii?use_http=true&RH   rh.colors   %   -5   80  5  dcont   1 0
-MODEL_GFS-PRES  GFS-PRES mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii?use_http=true&Pressure pressure_mb.colors   m/s   -5   80  5  dcont   1 0
-MODEL_========   =========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
-MODEL_========   =========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
-MODEL_========   =========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
-MODEL_========   =========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
-MODEL_========   =========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
+MODEL_GFS-TMP   GFS-TMP  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii&TMP  temp.colors   C   -5   80  5  dcont   1 0
+MODEL_GFS-RH    GFS-RH   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii&RH   rh.colors   %   -5   80  5  dcont   1 0
+MODEL_GFS-PRES  GFS-PRES mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii&Pressure pressure_mb.colors   m/s   -5   80  5  dcont   1 0
+MODEL_========   =========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
+MODEL_========   =========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
+MODEL_========   =========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
+MODEL_========   =========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
+MODEL_========   =========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
 
 ############################
 # Satellite data
 
-SAT_==== ==Sat==  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes1km?use_http=true&gvar_ch1  sat_albedo.colors  albedo   -5   80  5  dcont   1 0
+SAT_==== ==Sat==  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes1km&gvar_ch1  sat_albedo.colors  albedo   -5   80  5  dcont   1 0
 SAT_==== ==Sat==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 SAT_==== ==Sat==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 SAT_==== ==Sat==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
@@ -374,15 +382,15 @@ SAT_==== ==Sat==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 
 SAT_==== ==Sat==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 SAT_==== ==Sat==  mdvp::static//localhost::/spacer?&None  none.colors   m   0 0 0 dcont 0 0
 
-SAT_Vis   SAT_Vis  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_1km?use_http=true&gvar_ch1  sat_cloud.colors  albedo   -5   80  5  dcont   1 0
-SAT_IR2   SAT_IR2  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km?use_http=true&gvar_ch2   sat_temp.colors   C   -5   80  5  dcont   1 0
-SAT_IR3   SAT_IR3  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km?use_http=true&gvar_ch3   sat_temp.colors   C   -5   80  5  dcont   1 0
-SAT_IR4   SAT_IR4  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km?use_http=true&gvar_ch4   sat_temp.colors   C   -5   80  5  dcont   1 0
-SAT_WV    SAT_WV   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km?use_http=true&gvar_ch6   wv.colors   C   -5   80  5  dcont   1 0
-SAT_==== ========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
-SAT_==== ========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
-SAT_==== ========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
-SAT_==== ========  mdvp::static//front.eol.ucar.edu:8080:/spacer?use_http=true&Elevation  none.colors   m   -5   80  5  dcont   1 0
+SAT_Vis   SAT_Vis  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_1km&gvar_ch1  sat_cloud.colors  albedo   -5   80  5  dcont   1 0
+SAT_IR2   SAT_IR2  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km&gvar_ch2   sat_temp.colors   C   -5   80  5  dcont   1 0
+SAT_IR3   SAT_IR3  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km&gvar_ch3   sat_temp.colors   C   -5   80  5  dcont   1 0
+SAT_IR4   SAT_IR4  mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km&gvar_ch4   sat_temp.colors   C   -5   80  5  dcont   1 0
+SAT_WV    SAT_WV   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/sat/goes13_4km&gvar_ch6   wv.colors   C   -5   80  5  dcont   1 0
+SAT_==== ========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
+SAT_==== ========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
+SAT_==== ========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
+SAT_==== ========  $(DATA_DIR)/spacer&Elevation  none.colors   m   -5   80  5  dcont   1 0
 
 </GRIDS>
 
@@ -449,7 +457,7 @@ Soundings     Soundings      sounding_loc.map        1  0.0 1000000.0  yellow
 # Legend_label  URL U V W_fieldnames units  Style [Color]
 #----------------------------------------------------------------------------
 
-GFS   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii?use_http=true& UGRD  VGRD  None m/s 1 cyan
+GFS   mdvp:://front.eol.ucar.edu:8080:hawaii/mdv/gfs/hawaii& UGRD  VGRD  None m/s 1 cyan
 
 </WINDS>
 
@@ -480,7 +488,7 @@ cidd.debug2_flag:           0
 #  System will startup using field 0, requesting data closest to the
 # demo time. The movie frame will be centered on the time after applying
 # temporal rounding. 
-cidd.demo_time:  00:00 08/24/2018
+cidd.demo_time:  23:55 08/24/2018
 
 # Set times to the nearest value divisible by the number of seconds
 cidd.temporal_rounding:    1

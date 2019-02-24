@@ -103,7 +103,7 @@ trigger = TIME_TRIGGER;
 // Type: int
 //
 
-time_trigger_interval = 600;
+time_trigger_interval = 86400;
 
 ///////////// trigger_time_margin /////////////////////
 //
@@ -243,18 +243,8 @@ accum_method = DAILY_ACCUM;
 
 running_accums = {
   {
-    period_secs = 3600,
-    output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_1hr"
-  }
-  ,
-  {
-    period_secs = 7200,
-    output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_2hr"
-  }
-  ,
-  {
-    period_secs = 10800,
-    output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_3hr"
+    period_secs = 86400,
+    output_url = "$(DATA_DIR)/hawaii/mdv/running_accum_24hr"
   }
 };
 
@@ -319,7 +309,7 @@ tod_accum_output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_daily";
 // Type: string
 //
 
-total_accum_output_url = "./total_accum";
+total_accum_output_url = "$(DATA_DIR)/hawaii/mdv/qpe_accum_total";
 
 //======================================================================
 //
