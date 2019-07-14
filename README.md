@@ -1,6 +1,6 @@
 # Using LROSE to study the precip from Hurricane Lane, Hawaii, August 2018
 
-This git repository contains the parameters and scripts needed for running a QPE analysis for Lane.
+This git repository contains the parameters and scripts needed for running a QPE analysis for Hurricane Lane.
 
 Things will work best if you can set up the directory structures are indicated.
 
