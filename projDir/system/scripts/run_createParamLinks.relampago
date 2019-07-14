@@ -1,6 +1,0 @@
-#! /bin/csh
-
-createParamLinks.py --verbose --template ~/git/lrose-projects-eolbase/data_dirs/data.relampago --installDir ~/projDir/data/relampago
-
-
-

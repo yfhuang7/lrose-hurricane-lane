@@ -1,0 +1,7 @@
+#! /bin/csh
+
+createParamLinks.py --verbose --template ~/git/lrose-hurricane-lane/data_dirs/data.hawaii --installDir ~/projDir/data/hawaii
+
+
+
+
