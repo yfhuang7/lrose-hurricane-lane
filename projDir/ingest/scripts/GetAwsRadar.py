@@ -18,10 +18,10 @@ import string
 import subprocess
 from optparse import OptionParser
 
-import urllib
 from xml.dom import minidom
 from sys import stdin
-from urllib import urlopen
+import urllib
+from urllib import *
 from subprocess import call
 
 def main():
@@ -336,11 +336,11 @@ def parseArgs():
     parser.add_option('--outputDir',
                       dest='outputDir',
                       default='/tmp/aws',
-                      help='Path of output dir to which the files are written')
+                      help='Path of output dir to which the files are written - default is /tmp/aws')
     parser.add_option('--tmpDir',
                       dest='tmpDir',
                       default='/tmp/stage',
-                      help='Path of tmp dir for staging data')
+                      help='Path of tmp dir for staging data - default is /tmp/stage')
     parser.add_option('--force',
                       dest='force', default=False,
                       action="store_true",
@@ -364,11 +364,11 @@ def parseArgs():
     parser.add_option('--start',
                       dest='startTime',
                       default='1970 01 01 00 00 00',
-                      help='Start time for retrieval - archive mode')
+                      help='Start time for retrieval - archive mode - e.g. \"2019 03 04 23 00 00\"')
     parser.add_option('--end',
                       dest='endTime',
                       default='1970 01 01 00 00 00',
-                      help='End time for retrieval - archive mode')
+                      help='End time for retrieval - archive mode - e.g. \"2019 03 04 23 30 00\"')
 
     (options, args) = parser.parse_args()
 
