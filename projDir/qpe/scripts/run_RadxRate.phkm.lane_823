@@ -1,0 +1,10 @@
+#! /bin/csh
+
+setenv radar_name phkm
+setenv RADAR_NAME PHKM
+setenv SOUNDING_NAME PHTO
+setenv LOG_PATH /tmp/RadxRate.hawaii.phkm.log
+
+cd $HOME/git/lrose-hurricane-lane/projDir/qpe/params
+
+RadxRate -params RadxRate.hawaii.823 -start "2018 08 23 01 00 00" -end "2018 08 23 09 00 00"
