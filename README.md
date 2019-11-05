@@ -85,8 +85,8 @@ Select the date range you need, and then name the files with the date range.
 For example:
 
 ```
- $DATA_DIR/hawaii/raw/sounding/nws/20180820_20180830.phli.ttaa
- $DATA_DIR/hawaii/raw/sounding/nws/20180820_20180830.phto.ttaa
+ $DATA_DIR/hawaii/raw/soundings/nws/20180820_20180830.phli.ttaa
+ $DATA_DIR/hawaii/raw/soundings/nws/20180820_20180830.phto.ttaa
 ```
 
 If your data spans more than one month, create a file for each month separately. This is required because the TTAA messages do not contain the year and month, so we have to determine that from the file name.
@@ -242,7 +242,7 @@ For example:
 
 ```
   cd ~/git/lrose-hurricane-lane/projDir/ingest/params
-  NWSsoundingIngest -params NWSsoundingIngest.hawaii -debug -f $DATA_DIR/hawaii/raw/sounding/nws/20180820_20180830.phli.ttaa
+  NWSsoundingIngest -params NWSsoundingIngest.hawaii -debug -f $DATA_DIR/hawaii/raw/soundings/nws/20180820_20180830.phli.ttaa
 ```
 
 That should store the soundings in:
